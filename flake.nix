@@ -22,8 +22,8 @@
           cargoSha256 = "0000000000000000000000000000000000000000000000000000000000000000";  # Replace after first build
 
           nativeBuildInputs = [
-            pkgs.openssl
-            pkgs.pkgconfig
+            pkgs.openssl,
+            pkgs.pkgconfig,
             pkgs.libgit2
             # Add other dependencies as required by Zola
           ];
@@ -35,7 +35,7 @@
             description = "Your custom version of Zola";
             homepage = "https://www.getzola.org/";
             license = licenses.mit;
-            maintainers = with maintainers; [ yourGithubUsername ];
+            # maintainers = with maintainers; [ yourGithubUsername ];
             platforms = platforms.all;
           };
         };
