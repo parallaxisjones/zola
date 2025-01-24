@@ -13,13 +13,13 @@
     in
     {
       packages = {
-        ${system} = pkgs.rustPlatform.buildRustPackage {
+        [ system ] = pkgs.rustPlatform.buildRustPackage {
           pname = "myZola";
           version = "custom";
 
           src = self;
 
-          cargoSha256 = "<REPLACE_WITH_CORRECT_HASH>";  # We'll address this later
+          cargoSha256 = "sha256-0000000000000000000000000000000000000000000000000000";  # Replace after first build
 
           nativeBuildInputs = [
             pkgs.openssl
